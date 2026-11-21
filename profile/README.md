@@ -1,16 +1,20 @@
-# Никита Никитин
+# Никита Никитин — DevOps
 
-Занимаюсь Linux и автоматизацией эксплуатации. В этом портфолио один сервис задач на FastAPI и PostgreSQL проходит путь от Docker Compose до Kubernetes. Для каждого этапа есть код, команда запуска и проверка результата в GitHub Actions.
+DevOps-инженер. 2,5 года был единственным специалистом по IT-инфраструктуре в транспортной логистической компании: 10+ серверов Linux/Windows, CI/CD, PostgreSQL/MS SQL с бэкапами и DR, мониторинг, DNS/VPN.
 
-**Стек** — Python, Bash, PostgreSQL, Docker Compose, Ansible, Terraform, Prometheus, Grafana, Helm и Argo CD.
+**Стек:** Docker · Kubernetes (k3s, Helm, ArgoCD, GitOps) · GitHub Actions · Terraform (Yandex Cloud) · Ansible · Prometheus / Grafana / Loki · Python · Bash
 
-| Проект | Что можно проверить | CI |
-|---|---|---|
-| [portfolio-api](https://github.com/nikit0id/portfolio-api) | Создание задачи, запись в PostgreSQL, готовность API | [Проверки закреплённой версии](https://github.com/nikit0id/compose-app-cicd/actions/workflows/ci.yml) |
-| [compose-app-cicd](https://github.com/nikit0id/compose-app-cicd) | Публикация в GHCR, сканирование образа и пробный релиз по SSH | [![CI доставки](https://github.com/nikit0id/compose-app-cicd/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nikit0id/compose-app-cicd/actions/workflows/ci.yml) |
-| [ansible-linux-baseline](https://github.com/nikit0id/ansible-linux-baseline) | Семь ролей Ubuntu, повторный converge и проверка работающих служб | [![CI Ubuntu](https://github.com/nikit0id/ansible-linux-baseline/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nikit0id/ansible-linux-baseline/actions/workflows/ci.yml) |
-| [vpn-server-ansible](https://github.com/nikit0id/vpn-server-ansible) | Передача файла через Xray и Hysteria 2 на временной ВМ | [![CI VPN](https://github.com/nikit0id/vpn-server-ansible/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nikit0id/vpn-server-ansible/actions/workflows/ci.yml) |
-| [terraform-yc-infra](https://github.com/nikit0id/terraform-yc-infra) | VPC, ВМ, DNS, генерация inventory и четыре офлайн-плана | [![CI Terraform](https://github.com/nikit0id/terraform-yc-infra/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nikit0id/terraform-yc-infra/actions/workflows/ci.yml) |
-| [monitoring-stack](https://github.com/nikit0id/monitoring-stack) | Дашборд Grafana и доставка HostDown после остановки экспортера | [![CI мониторинга](https://github.com/nikit0id/monitoring-stack/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nikit0id/monitoring-stack/actions/workflows/ci.yml) |
-| [pg-backup-toolkit](https://github.com/nikit0id/pg-backup-toolkit) | Бэкап в MinIO и восстановление задач с проверкой SHA-256 и числа строк | [![CI восстановления](https://github.com/nikit0id/pg-backup-toolkit/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nikit0id/pg-backup-toolkit/actions/workflows/ci.yml) |
-| [kubernetes-ops-lab](https://github.com/nikit0id/kubernetes-ops-lab) | StatefulSet PostgreSQL, HPA, TLS и доставка через Argo CD | [![CI Kubernetes](https://github.com/nikit0id/kubernetes-ops-lab/actions/workflows/portfolio.yml/badge.svg?branch=main)](https://github.com/nikit0id/kubernetes-ops-lab/actions/workflows/portfolio.yml) |
+**Проекты** — не учебные, а рабочие практики, переупакованные в код (CI, тесты, IaC):
+
+| Проект | Что это |
+|---|---|
+| [compose-app-cicd](https://github.com/nikit0id/compose-app-cicd) | Полный CI/CD: тесты → сборка в GHCR → Trivy → деплой по SSH с health check и автооткатом |
+| [monitoring-stack](https://github.com/nikit0id/monitoring-stack) | Prometheus + Grafana + Loki + Alertmanager: дашборды и алерты в коде, уведомления в Telegram |
+| [ansible-linux-baseline](https://github.com/nikit0id/ansible-linux-baseline) | Ansible-роли для Ubuntu (SSH-hardening, ufw, fail2ban, node_exporter), тесты Molecule |
+| [terraform-yc-infra](https://github.com/nikit0id/terraform-yc-infra) | Terraform-модули для Yandex Cloud: VPC, ВМ, DNS, remote state, plan в PR |
+| [pg-backup-toolkit](https://github.com/nikit0id/pg-backup-toolkit) | Бэкапы PostgreSQL с ротацией и **автоматической проверкой восстановления** |
+| [kubernetes-ops-lab](https://github.com/nikit0id/kubernetes-ops-lab) | K8s-лаба на kind (k3s в плане): Helm, ArgoCD (GitOps), ingress-nginx + cert-manager, kube-prometheus-stack; диагностика ImagePullBackOff и rollback |
+
+Контакты: Telegram [@Helchion](https://t.me/Helchion) · nikitoid709@gmail.com
+
+Английский: чтение документации, B1+.
