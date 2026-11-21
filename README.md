@@ -1,5 +1,7 @@
 # portfolio-api
 
+[![CI и доставка](https://github.com/nikit0id/compose-app-cicd/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nikit0id/compose-app-cicd/actions/workflows/ci.yml)
+
 FastAPI хранит задачи в PostgreSQL. Этот сервис используется в проектах доставки, мониторинга, резервного копирования и Kubernetes аккаунта nikit0id.
 
 ```mermaid
@@ -18,6 +20,8 @@ git clone https://github.com/nikit0id/portfolio-api && cd portfolio-api
 ./scripts/init-env
 docker compose up -d --build --wait
 ```
+
+Пайплайн [compose-app-cicd](https://github.com/nikit0id/compose-app-cicd) тестирует ревизию, указанную в его api-revision. Бейдж показывает результат для этой закреплённой версии.
 
 Откройте http://localhost:8000/docs для работы с задачами. Проверка готовности доступна на /health. Команда `docker compose down` сохраняет данные в именованном томе.
 
